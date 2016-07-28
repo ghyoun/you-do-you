@@ -71,3 +71,9 @@
 .input-group {
     width: 100%;
 }
+
+/* Sidebar styling */
+
+.sidebar-btn {
+    width: 52px;
+}
