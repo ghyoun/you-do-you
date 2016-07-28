@@ -4,5 +4,5 @@
         .module('meanBlank')
         .controller('404Controller', function($scope) {
 
-        }
+        });
 })()

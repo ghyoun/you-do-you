@@ -4,5 +4,5 @@
         .module('meanBlank')
         .controller('DashController', function($scope) {
 
-        }
+        });
 })()

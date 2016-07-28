@@ -4,5 +4,5 @@
         .module('meanBlank')
         .controller('HomeController', function($scope) {
 
-        }
+        });
 })()

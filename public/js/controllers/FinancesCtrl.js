@@ -1,7 +1,7 @@
 (function(){
 	'use strict'
     angular
-        .module('meanBlank')
+        .module('youDoYou')
         .controller('FinancesController', function($scope) {
 
         $scope.monthly_income = 0;
