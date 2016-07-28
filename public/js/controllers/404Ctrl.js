@@ -1,3 +1,8 @@
-angular.module('404Ctrl', []).controller('404Controller', function($scope) {
+(function(){
+	'use strict'
+    angular
+        .module('meanBlank')
+        .controller('404Controller', function($scope) {
 
-});
+        }
+})()

@@ -1,6 +1,5 @@
 (function(){
 	'use strict'
-    console.log('user controller');
     angular
         .module('meanBlank')
         .controller('LoginController', loginCtrl)

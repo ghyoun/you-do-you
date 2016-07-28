@@ -1,3 +1,8 @@
-angular.module('HomeCtrl', []).controller('HomeController', function($scope) {
-    
-});
+(function(){
+	'use strict'
+    angular
+        .module('meanBlank')
+        .controller('HomeController', function($scope) {
+
+        }
+})()

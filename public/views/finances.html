@@ -4,5 +4,123 @@
 <div class="dash-content">
     <div class="container-fluid">
         <!--DASH CONTENT-->
+        <div class="row">
+            <div class="col-md-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <strong>Control Panel</strong>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="form-group form-group-sm">
+                            <!-- Income -->
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><strong>Monthly Income</strong></span>
+                                <input type="number" class="form-control input-sm" ng-model="monthly_income" name="monthly_income">
+                            </div>
+                        </div>
+                        <strong>Remaining: {{ get_remaining() }}</strong>
+                    </div>
+
+                    <div class="panel-footer">
+                        <button class="btn btn-success" ng-click="save_to_json()">Save</button>
+                        <!--<button class="btn btn-success" ng-click="save_to_json()">Reset Month</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Recuring (Left) -->
+            <div class="col-md-5 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <strong>Recuring Costs</strong>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+							<tr>
+								<th>Title</th>
+								<th>Amount</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr ng-repeat="recuring in recurings">
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Title" ng-model="recuring.title">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" ng-model="recuring.amount">
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" ng-click="delete_recuring($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="panel-body">
+                        <strong>Total: {{ get_recuring_total() }}</strong>
+                    </div>
+
+                    <div class="panel-footer">
+                        <button class="btn btn-primary" ng-click="new_recuring()">Add Recuring Cost</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One-time (Right) -->
+            <div class="col-md-6 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <strong>One-time Costs</strong>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+							<tr>
+								<th>Title</th>
+								<th>Date</th>
+								<th>Amount</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr ng-repeat="one_time in one_times">
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Title" ng-model="one_time.title">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" ng-model="one_time.date">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" ng-model="one_time.amount">
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" ng-click="delete_one_time($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="panel-body">
+                        <strong>Total: {{ get_one_time_total() }}</strong>
+                    </div>
+
+                    <div class="panel-footer">
+                        <button class="btn btn-primary" ng-click="new_one_time()">Add One Time Cost</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

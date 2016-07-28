@@ -1,3 +1,8 @@
-angular.module('DashCtrl', []).controller('DashController', function($scope) {
+(function(){
+	'use strict'
+    angular
+        .module('meanBlank')
+        .controller('DashController', function($scope) {
 
-});
+        }
+})()
