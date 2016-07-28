@@ -1,6 +1,7 @@
 # Custom
 public/libs
 *db.js
+.vscode
 
 # Logs
 logs

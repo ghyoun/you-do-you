@@ -1,11 +1,11 @@
-<div class="sidebar-container panel panel-default">
+<div class="sidebar-container panel panel-default" ng-controller="SidebarController">
     <!--dash button-->
-    <a href="/dash" id="dash-btn" class="sidebar-btn btn btn-lg btn-default" role="button">
+    <a href="/dash" id="dash-btn" ng-click="select('dash')" class="sidebar-btn btn btn-lg btn-default" role="button">
         <i class="fa fa-tachometer fa-fw fa-2x" aria-hidden="true"></i>
     </a>
     <br>
     <!--tasks button-->
-    <a href="/tasks" id="tasks-btn" ng-click="select_sidebar_icon()" class="sidebar-btn btn btn-lg btn-default" role="button">
+    <a href="/tasks" id="tasks-btn" class="sidebar-btn btn btn-lg btn-default" role="button">
         <i class="fa fa-list fa-fw fa-2x" aria-hidden="true"></i>
     </a>
     <br>
