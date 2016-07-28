@@ -73,7 +73,22 @@
 }
 
 /* Sidebar styling */
+.sidebar {
+    min-width: 94px;
+    background-color: #222;
+    border: none;
+}
 
 .sidebar-btn {
-    width: 52px;
+    padding: 12px 6.86px;
+    margin-bottom: 15px !important;
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+.sidebar-btn-last {
+    margin-bottom: 0 !important;
+}
+.sidebar-selected {
+    background-color: #079;
 }
