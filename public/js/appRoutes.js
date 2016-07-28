@@ -8,6 +8,18 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'HomeController'
 		})
 
+		// sign up page
+		.when('/login', {
+			templateUrl: 'views/login.html',
+			controller: 'LoginController'
+		})
+
+		// sign up page
+		.when('/dash', {
+			templateUrl: 'views/dash.html',
+			controller: 'DashController'
+		})
+
         // 404 page
 		.when('/404', {
 			templateUrl: 'views/404.html',

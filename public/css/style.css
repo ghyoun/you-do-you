@@ -41,3 +41,30 @@
     .navbar { margin: 0; }
     .navbar>li { float: none; }
 }
+
+/* Login */
+.login-panel {
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    max-width: 600px;
+}
+
+.login-header {
+    padding: 10px 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.login-btn {
+    width: 100%;
+}
+.entry-title {
+    width: 100px;
+}
