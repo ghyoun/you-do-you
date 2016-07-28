@@ -4,19 +4,33 @@ var mongoose = require('mongoose');
 var userSchema = mongoose.Schema({
     email: {
         type: String,
-        unique: true,
         required: true
     },
-    name: {
+    first_name: {
         type: String,
-        required: true
+        required: true,
+        minlength: 2
+    },
+    last_name: {
+        type: String,
+        required: true,
+        minlength: 2
     },
     password: {
         type: String,
-        require: true
+        require: true,
+        minlength: 8
     },
-    hash: String,
-    salt: String
-});
+}, {timestamps: true});
+
+
+userSchema.methods.validUser = function(enteredEmail){
+
+	if(enteredEmail == this.email){
+		return true
+	}else{
+		return false
+	}
+}
 
 var User = mongoose.model('User', userSchema);

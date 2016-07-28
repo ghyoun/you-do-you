@@ -3,6 +3,7 @@ angular.module('meanBlank', [
   'appRoutes',
   'HomeCtrl',
   'LoginCtrl',
+  'SignupCtrl',
   'DashCtrl',
   '404Ctrl'
   // Other Controllers
