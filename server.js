@@ -16,8 +16,6 @@ mongoose.connect(db.url); // // connect to our mongoDB database
 
 //app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
-// config files
-var db = require('./config/db');
 
 var port = process.env.PORT || 8080; // set our port
 // mongoose.createConnection(db.url); // connect to your mongoDB database (commented back in after you enter in your own credentials)

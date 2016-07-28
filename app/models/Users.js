@@ -11,6 +11,10 @@ var userSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    password: {
+        type: String,
+        require: true
+    },
     hash: String,
     salt: String
 });
