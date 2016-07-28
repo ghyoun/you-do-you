@@ -44,10 +44,7 @@
 
 /* Login */
 .login-panel {
-    position: absolute;
-    top: 40%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    margin: auto;
     padding: 20px;
     max-width: 600px;
 }
@@ -74,7 +71,7 @@
 
 /* Sidebar styling */
 .sidebar {
-    padding: 0 15px;
+    padding-left: 15px;
     margin-right: 0;
     float: left;
 }
@@ -90,6 +87,10 @@
     background-color: #444;
     color: white;
     border-color: #666;
+    text-shadow: 2px 2px #222;
+}
+.sidebar-btn:hover {
+    color: #079;
 }
 .sidebar-btn-last {
     margin-bottom: 15px;
@@ -97,6 +98,7 @@
 .sidebar-selected {
     background-color: #079;
 }
+
 
 .dash-content {
     padding-left: 107px;

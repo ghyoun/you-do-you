@@ -5,6 +5,7 @@ angular.module('meanBlank', [
   'LoginCtrl',
   'SignupCtrl',
   'DashCtrl',
+  'TasksCtrl',
   'FinancesCtrl',
   '404Ctrl'
   // Other Controllers

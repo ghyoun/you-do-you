@@ -1,21 +1,26 @@
-<div class="sidebar-container panel panel-default">
-        <button type="button" class="sidebar-btn btn btn-lg btn-default sidebar-selected">
-            <i class="fa fa-tachometer fa-fw fa-2x" aria-hidden="true"></i>
-        </button>
-        <br>
-        <button type="button" class="sidebar-btn btn btn-lg btn-default">
-            <i class="fa fa-list fa-fw fa-2x" aria-hidden="true"></i>
-        </button>
-        <br>
-        <button type="button" class="sidebar-btn btn btn-lg btn-default">
-            <i class="fa fa-flag fa-fw fa-2x" aria-hidden="true"></i>
-        </button>
-        <br>
-        <button type="button" class="sidebar-btn btn btn-lg btn-default">
-            <i class="fa fa-money fa-fw fa-2x" aria-hidden="true"></i>
-        </button>
-        <br>
-        <button type="button" class="sidebar-btn sidebar-btn-last btn btn-lg btn-default">
-            <i class="fa fa-futbol-o fa-fw fa-2x" aria-hidden="true"></i>
-        </button>
+<div class="sidebar-container panel panel-default" ng-init="selected = ">
+    <!--dash button-->
+    <a href="/dash" id="dash-btn" class="sidebar-btn btn btn-lg btn-default" role="button">
+        <i class="fa fa-tachometer fa-fw fa-2x" aria-hidden="true"></i>
+    </a>
+    <br>
+    <!--tasks button-->
+    <a href="/tasks" id="tasks-btn" ng-click="select_sidebar_icon()" class="sidebar-btn btn btn-lg btn-default" role="button">
+        <i class="fa fa-list fa-fw fa-2x" aria-hidden="true"></i>
+    </a>
+    <br>
+    <!--goals button-->
+    <a href="/goals" id="goals-btn" class="sidebar-btn btn btn-lg btn-default" role="button">
+        <i class="fa fa-flag fa-fw fa-2x" aria-hidden="true"></i>
+    </a>
+    <br>
+    <!--finances button-->
+    <a href="/finances" id="finances-btn" class="sidebar-btn btn btn-lg btn-default" role="button">
+        <i class="fa fa-money fa-fw fa-2x" aria-hidden="true"></i>
+    </a>
+    <br>
+    <!--fitness button-->
+    <a href="/fitness" id="fitness-btn" class="sidebar-btn sidebar-btn-last btn btn-lg btn-default" role="button">
+        <i class="fa fa-futbol-o fa-fw fa-2x" aria-hidden="true"></i>
+    </a>
 </div>

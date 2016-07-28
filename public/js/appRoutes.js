@@ -26,6 +26,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'DashController'
 		})
 		
+        // tasks page
+		.when('/tasks', {
+			templateUrl: 'views/tasks.html',
+			controller: 'TasksController'
+		})
+
 		// finances page
 		.when('/finances', {
 			templateUrl: 'views/finances.html',
