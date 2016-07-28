@@ -21,6 +21,8 @@ var userSchema = mongoose.Schema({
         require: true,
         minlength: 8
     },
+    finance: {},
+
 }, {timestamps: true});
 
 

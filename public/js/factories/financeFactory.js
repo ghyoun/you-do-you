@@ -3,10 +3,11 @@
     console.log('finance factory');
 	angular
 		.module('youDoYou')
-		.factory('financeFactory', factory)
+		.factory('financeFactory', factory);
 
 	function factory($http){
 		var factory = {}
+
 
 		factory.getSession = function(callback){
 			$http.get('/session')
@@ -14,6 +15,14 @@
 					callback(returnData)
 				})
 		}
+
+		factory.getFinances = function(callback) {
+			$http.get('/getFinances')
+				.then(function(returnData){
+					callback(returnData)
+				})
+		}
+
 		return factory;
 	}
 })()

@@ -1,5 +1,6 @@
 // Import Controllers
 var user = require('./controllers/users.js');
+var finance = require('./controllers/finances.js');
 
 module.exports = function(app) {
     // server routes ===========================================================
@@ -18,11 +19,14 @@ module.exports = function(app) {
 		}
 	});
 
+	app.get('/getFinances', finance.getFinances);
+
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
 
 	app.post('/signup', user.create);
 	app.post('/login', user.login);
+	app.post('/logout', user.logout);
 
 };

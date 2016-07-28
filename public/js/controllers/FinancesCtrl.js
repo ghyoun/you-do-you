@@ -2,7 +2,7 @@
 	'use strict'
     angular
         .module('youDoYou')
-        .controller('FinancesController', function($scope) {
+        .controller('FinancesController', function($scope, financeFactory) {
 
         $scope.monthly_income = 0;
         $scope.monthly_costs = 0;
@@ -11,7 +11,11 @@
 
         // Load from DB
         ///////////////
-
+		$scope.saveMonthly = function() {
+			financeFactory.getFinances(function(financeData) {
+				console.log(financeData);
+			})
+		}
         // Recuring functions
         $scope.new_recuring = function() {
             var recuring = {
