@@ -12,7 +12,7 @@ var db = require('./config/db');
 
 
 // configuration ===========================================
-mongoose.connect(db.url); // // connect to our mongoDB database
+mongoose.connect(db.uri); // // connect to our mongoDB database
 
 //app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)

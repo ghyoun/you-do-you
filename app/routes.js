@@ -7,7 +7,7 @@ module.exports = function(app) {
 	// authentication routes
 	var express = require('express');
 	var router = express.Router();
-        
+
     // frontend routes =========================================================
 	// route to handle all angular requests
 	app.get('*', function(req, res) {
