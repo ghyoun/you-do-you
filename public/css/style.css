@@ -72,7 +72,31 @@
     width: 100%;
 }
 
-.reg-errors {
-    margin-left: 35%;
-    color: red;
+/* Sidebar styling */
+.sidebar {
+    padding: 0 15px;
+    margin-right: 0;
+    float: left;
 }
+.sidebar-container {
+    width: 92px;
+    background-color: #222;
+    border: none;
+}
+
+.sidebar-btn {
+    margin: 15px 15px 0 15px;
+    padding: 12px 6.86px;
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+.sidebar-btn-last {
+    margin-bottom: 15px;
+}
+.sidebar-selected {
+    background-color: #079;
+}
+
+.dash-content {
+    padding-left: 107px;

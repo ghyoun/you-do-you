@@ -31,6 +31,12 @@
     			controller: 'DashController'
     		})
 
+			// finances page
+			.when('/finances', {
+				templateUrl: 'views/finances.html',
+				controller: 'FinancesController'
+			})
+
             // 404 page
     		.when('/404', {
     			templateUrl: 'views/404.html',
