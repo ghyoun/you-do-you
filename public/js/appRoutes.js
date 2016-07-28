@@ -8,13 +8,19 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'HomeController'
 		})
 
-		// sign up page
+		// sign in page
 		.when('/login', {
 			templateUrl: 'views/login.html',
 			controller: 'LoginController'
 		})
 
 		// sign up page
+		.when('/signup', {
+			templateUrl: 'views/signup.html',
+			controller: 'SignupController'
+		})
+
+		// dashboard page
 		.when('/dash', {
 			templateUrl: 'views/dash.html',
 			controller: 'DashController'
