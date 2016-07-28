@@ -2,7 +2,7 @@
 	'use strict'
 
 	angular
-		.module('meanBlank', ['ngRoute']) // inject ngMessage
+		.module('youDoYou', ['ngRoute']) // inject ngMessage
 		.config(config)
 	function config($routeProvider, $locationProvider){
         $routeProvider
@@ -31,6 +31,12 @@
     			controller: 'DashController'
     		})
 
+            // tasks page
+            .when('/tasks', {
+                templateUrl: 'views/tasks.html',
+                controller: 'TasksController'
+            })
+
 			// finances page
 			.when('/finances', {
 				templateUrl: 'views/finances.html',
@@ -42,9 +48,6 @@
     			templateUrl: 'views/404.html',
     			controller: '404Controller'
     		})
-
-            // Other pages
-
 
             // Redirect all others to 404
     		.otherwise('/404');

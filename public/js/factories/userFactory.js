@@ -2,7 +2,7 @@
 	'use strict'
     console.log('user factory');
 	angular
-		.module('meanBlank')
+		.module('youDoYou')
 		.factory('userFactory', factory)
 
 	function factory($http){

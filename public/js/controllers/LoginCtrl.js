@@ -1,7 +1,7 @@
 (function(){
 	'use strict'
     angular
-        .module('meanBlank')
+        .module('youDoYou')
         .controller('LoginController', loginCtrl)
 
     function loginCtrl(userFactory, $location) {

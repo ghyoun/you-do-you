@@ -1,8 +1,8 @@
 (function(){
 	'use strict'
     angular
-        .module('meanBlank')
+        .module('youDoYou')
         .controller('404Controller', function($scope) {
 
-        });
+        })
 })()

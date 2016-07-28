@@ -2,7 +2,7 @@
 	'use strict'
     console.log('user controller');
     angular
-        .module('meanBlank')
+        .module('youDoYou')
         .controller('SignupController', signupCtrl)
 
     function signupCtrl(userFactory, $location) {
