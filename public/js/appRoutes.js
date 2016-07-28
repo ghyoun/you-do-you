@@ -25,6 +25,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/dash.html',
 			controller: 'DashController'
 		})
+		
+		// finances page
+		.when('/finances', {
+			templateUrl: 'views/finances.html',
+			controller: 'FinancesController'
+		})
 
         // 404 page
 		.when('/404', {
