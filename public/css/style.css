@@ -1,0 +1,29 @@
+/* Custom CSS */
+
+/* Navbar */
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; }
+
+.navbar { position: relative; }
+.navbar .navbar-right > li:nth-last-child(2) { padding-left: 22px; }
+.navbar .navbar-right > li:last-child { padding-left: 12px;}
+
+#signup-btn {
+    background-color: #333;
+    color: #eee;
+}
+.navbar.navbar-inverse { background-color: #222; }
+.navbar>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-right > li:nth-last-child(2) { padding-left: 15px; }
+    .navbar .navbar-right > li:last-child { padding-left: 10px; padding-right: 15px; }
+
+    .navbar { margin: 7.5px auto; padding: 0; }
+    .navbar { margin: 0; }
+    .navbar>li { float: none; }
+}

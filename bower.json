@@ -1,0 +1,12 @@
+{
+    "name": "meanblank_bower",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "angular": "latest",
+        "angular-route": "latest",
+        "jQuery":"2.1.4",
+        "trianglify":"latest"
+    }
+}

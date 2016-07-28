@@ -1,3 +1,7 @@
+# Custom
+public/libs
+*db.js
+
 # Logs
 logs
 *.log
