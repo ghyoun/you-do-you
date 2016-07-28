@@ -1,3 +1,8 @@
-angular.module('DashCtrl', []).controller('DashController', function($scope) {
+(function(){
+	'use strict'
+    angular
+        .module('youDoYou')
+        .controller('DashController', function($scope) {
 
-});
+        })
+})()

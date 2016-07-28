@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="LoginController as login">
     <div class="login-panel">
         <div class="login-header">
             <h2>Sign in to <strong>You Do You</strong></h2>
@@ -10,17 +10,20 @@
                         <span class="input-group-addon entry-title">
                             <span class="glyphicon glyphicon-user"></span> Email
                         </span>
-                        <input type="text" ng-model="inputEmail" class="form-control input-sm" placeholder="email@example.com" name="accountEmail">
+                        <input type="text" ng-model="login.loginInfo.email" class="form-control input-sm" placeholder="email@example.com" name="accountEmail">
                     </div>
                     <br />
                     <div class="input-group input-group-sm">
                         <span class="input-group-addon entry-title">
                             <span class="glyphicon glyphicon-lock"></span> Password
                         </span>
-                        <input type="password" ng-model="inputPassword" class="form-control input-sm" name="accountPassword">
+                        <input type="password" ng-model="login.loginInfo.password" class="form-control input-sm" name="accountPassword">
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-sm login-btn" ng-click="">Sign in <span class="glyphicon glyphicon-ok"></span></button>
+                <button type="button" class="btn btn-primary btn-sm login-btn" ng-click="login.login()">Sign in <span class="glyphicon glyphicon-ok"></span></button>
+            </div>
+            <div class='reg-errors'>
+                {{login.errors}}
             </div>
             <div class="panel-footer">
                 <p>

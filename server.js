@@ -5,15 +5,19 @@ var mongoose       = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser     = require('body-parser');
 var flash    = require('connect-flash');
-
 var methodOverride = require('method-override');
 var session = require('express-session');
 var db = require('./config/db');
 
 
 // configuration ===========================================
-mongoose.connect(db.uri); // // connect to our mongoDB database
 
+app.use(session({
+  secret: '1234567890QWERT'
+}));
+
+mongoose.connect(db.uri); // // connect to our mongoDB database
+require("./app/models/Users");
 //app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 

@@ -1,3 +1,8 @@
-angular.module('HomeCtrl', []).controller('HomeController', function($scope) {
-    
-});
+(function(){
+	'use strict'
+    angular
+        .module('youDoYou')
+        .controller('HomeController', function($scope) {
+
+        })
+})()
