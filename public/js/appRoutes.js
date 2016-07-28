@@ -14,6 +14,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'LoginController'
 		})
 
+		// sign up page
+		.when('/dash', {
+			templateUrl: 'views/dash.html',
+			controller: 'DashController'
+		})
+
         // 404 page
 		.when('/404', {
 			templateUrl: 'views/404.html',
