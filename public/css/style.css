@@ -71,3 +71,8 @@
 .input-group {
     width: 100%;
 }
+
+.reg-errors {
+    margin-left: 35%;
+    color: red;
+}

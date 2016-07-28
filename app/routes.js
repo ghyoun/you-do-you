@@ -1,5 +1,5 @@
-// Import Models
-var Users = require('./models/Users.js');
+// Import Controllers
+var user = require('./controllers/users.js');
 
 module.exports = function(app) {
     // server routes ===========================================================
@@ -13,4 +13,7 @@ module.exports = function(app) {
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
+
+	app.post('/signup', user.create);
+	app.post('/login', user.login);
 };

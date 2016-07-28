@@ -1,48 +1,53 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="SignupController as signup">
     <div class="login-panel">
         <div class="login-header">
             <h2>Create account for <strong>You Do You</strong></h2>
         </div>
         <div class="panel panel-primary">
-            <div class="panel-body">
-                <div class="form-group form-group-sm">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon entry-title">
-                            First Name
-                        </span>
-                        <input type="text" ng-model="firstName" class="form-control input-sm" placeholder="John" name="firstName">
+            <form>
+                <div class="panel-body">
+                    <div class="form-group form-group-sm">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon entry-title">
+                                First Name
+                            </span>
+                            <input type="text" ng-model="signup.signupInfo.firstName" class="form-control input-sm" placeholder="John" name="firstName">
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon entry-title">
+                                Last Name
+                            </span>
+                            <input type="text" ng-model="signup.signupInfo.lastName" class="form-control input-sm" placeholder="Doe" name="lastName">
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon entry-title">
+                                <span class="glyphicon glyphicon-user"></span> Email
+                            </span>
+                            <input type="text" ng-model="signup.signupInfo.email" class="form-control input-sm" placeholder="email@example.com" name="accountEmail">
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon entry-title">
+                                <span class="glyphicon glyphicon-lock"></span> Password
+                            </span>
+                            <input type="password" ng-model="signup.signupInfo.password" class="form-control input-sm" name="accountPassword">
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon entry-title">
+                                <span class="glyphicon glyphicon-lock"></span> Confirm PW
+                            </span>
+                            <input type="password" ng-model="signup.signupInfo.confirmPassword" class="form-control input-sm" name="accountConfirmPassword">
+                        </div>
                     </div>
-                    <br />
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon entry-title">
-                            Last Name
-                        </span>
-                        <input type="text" ng-model="lastName" class="form-control input-sm" placeholder="Doe" name="lastName">
-                    </div>
-                    <br />
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon entry-title">
-                            <span class="glyphicon glyphicon-user"></span> Email
-                        </span>
-                        <input type="text" ng-model="inputEmail" class="form-control input-sm" placeholder="email@example.com" name="accountEmail">
-                    </div>
-                    <br />
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon entry-title">
-                            <span class="glyphicon glyphicon-lock"></span> Password
-                        </span>
-                        <input type="password" ng-model="inputPassword" class="form-control input-sm" name="accountPassword">
-                    </div>
-                    <br />
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon entry-title">
-                            <span class="glyphicon glyphicon-lock"></span> Confirm PW
-                        </span>
-                        <input type="password" ng-model="confirmPassword" class="form-control input-sm" name="accountConfirmPassword">
+                    <button type="button" class="btn btn-primary btn-sm login-btn" ng-click="signup.signup()">Create account <span class="glyphicon glyphicon-user"></span></button>
+                    <div class='reg-errors'>
+                        {{signup.errors}}
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-sm login-btn" ng-click="">Create account <span class="glyphicon glyphicon-user"></span></button>
-            </div>
+            </form>`
             <div class="panel-footer">
                 <p>
                     Already have an account? <a href="/login">Sign in!</a>
