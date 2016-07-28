@@ -35,26 +35,31 @@
         <script src="js/controllers/FinancesCtrl.js"></script>
         <script src="js/controllers/404Ctrl.js"></script>
         <script src="js/controllers/SidebarCtrl.js"></script>
+        <script src="js/controllers/NavbarCtrl.js"></script>
     </head>
     <body ng-app="youDoYou">
         <!-- Header -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarController">
             <div class="container">
                 <!-- Brand Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">You Do You</a>
                 </div>
-
                 <!-- Nav List -->
                 <div class="nav-list">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/">Home</a></li>
-                        <!--<li>
+                        <li ng-if="userInfo.status">
+                            <a class="btn btn-default btn-outline btn-circle brighter-btn" href="/dash">Dashboard</a>
+                        </li>
+                        <li ng-if="userInfo.status">
+                            <a class="btn btn-default btn-outline btn-circle" ng-click="logout()">Logout</a>
+                        </li>
+                        <li ng-if="!userInfo.status">
                             <a class="btn btn-default btn-outline btn-circle" href="/login">Sign in</a>
                         </li>
-                        <li>
-                            <a class="btn btn-default btn-outline btn-circle" id="signup-btn" href="/signup">Sign up</a>
-                        </li>-->
+                        <li ng-if="!userInfo.status">
+                            <a class="btn btn-default btn-outline btn-circle brighter-btn" href="/signup">Sign up</a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->

@@ -23,10 +23,11 @@
 .navbar .navbar-right > li:nth-last-child(2) { padding-left: 22px; }
 .navbar .navbar-right > li:last-child { padding-left: 12px;}
 
-#signup-btn {
-    background-color: #333;
-    color: #eee;
+.brighter-btn {
+    background-color: #333 !important;
+    color: #eee !important;
 }
+
 .navbar.navbar-inverse { background-color: #222; }
 .navbar>li { float: right; }
 
