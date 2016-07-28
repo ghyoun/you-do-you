@@ -1,5 +1,19 @@
 /* Custom CSS */
 
+@font-face {
+    font-family: "Redacted";
+    src: url("../fonts/redacted-regular.eot");
+    src: url("../fonts/redacted-regular.woff2") format("woff2"),
+         url("../fonts/redacted-regular.woff") format("woff"),
+         url("../fonts/redacted-regular.otf") format("opentype"),
+         url("../fonts/redacted-regular.svg#filename") format("svg");
+}
+
+.placeholder-text {
+    font-family: "Redacted";
+    color: lightgrey;
+}
+
 /* Navbar */
 .navbar-brand { position: relative; z-index: 2; }
 
