@@ -267,3 +267,7 @@ select.high, select option.high {
     height: 75px;
     overflow-y: scroll;
 }
+
+#burndown, .control-panel {
+    height: 300px;
+}
