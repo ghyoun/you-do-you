@@ -23,7 +23,9 @@
 
 			$scope.load();
 
-
+			$scope.get_percent = function(goal) {
+				return (goal.current_value / goal.max_value) * 100;
+			}
 
 			$scope.get_series = function() {
 				var series = [];

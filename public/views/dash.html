@@ -27,6 +27,9 @@
                             <div class="panel-heading text-center">
                                 <h3><strong>Finances</strong></h3>
                             </div>
+                            <div class="panel-body" id="burndown">
+                                <button class="btn btn-info" ng-click="render_chart()">Load Burndown Chart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,6 +38,23 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">
                                 <h3><strong>Goals</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div ng-repeat="goal in goals" class="text-center">
+                                    <h4><strong>{{goal.title}}</strong></h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped active" ng-class="complete(goal) ? 'progress-bar-success' : ''" role="progressbar"
+                                                aria-valuenow="{{goal.current_value}}" aria-valuemin="0" aria-valuemax="{{goal.max_value}}" style="width:{{get_percent(goal)}}%">
+                                                    <p class="progtext">
+                                                        {{goal.current_value}} {{goal.units}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
