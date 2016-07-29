@@ -17,13 +17,7 @@
 					console.log(factoryData);
 				})
 			}
-<<<<<<< HEAD
 
-			console.log($scope.tasks);
-			
-=======
-			console.log($scope.tasks);
->>>>>>> origin/master
 			$scope.load();
         });
 })()
