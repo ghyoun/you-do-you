@@ -137,6 +137,7 @@ select.high, select option.high {
         position: fixed;
         bottom: 0pt;
         right: 0pt;
+        z-index: 3;
     }
 
     .all_users:hover {
@@ -165,6 +166,7 @@ select.high, select option.high {
         position: fixed;
         bottom: 0pt;
         right: 0pt;
+        z-index: 3;
     }
 
     .user_list_heading:hover {
@@ -201,10 +203,12 @@ select.high, select option.high {
         position: fixed;
         bottom: 0pt;
         right: 200pt;
+        z-index: 3;
     }
 
     .friend_name {
         padding: 1px 0px 1px 10px;
+        z-index: 3;
     }
 
     .friend_name:hover {
@@ -220,12 +224,14 @@ select.high, select option.high {
         height: 200px;
         padding: 0px;
         background-color: white;
+        z-index: 3;
     }
 
     .enter_message {
         padding: 0px;
         height: 55px;
         width: 200px !important;
+        z-index: 3;
     }
 
     .enter_message textarea {

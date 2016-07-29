@@ -21,6 +21,7 @@ module.exports = function(app) {
 
 	app.get('/getFinances', finance.getFinances);
 	app.get('/getTasks', task.getTasks);
+	app.get('/getGoals', goal.getGoals);
 	app.get('/logout', user.logout);
 	app.get('/getUsers', user.getUsers);
 
@@ -33,4 +34,5 @@ module.exports = function(app) {
 
 	app.post('/saveFinances', finance.saveFinances);
 	app.post('/saveTasks', task.saveTasks);
+	app.post('/saveGoals', goal.saveGoals);
 };
