@@ -1,6 +1,5 @@
 (function(){
 	'use strict'
-    console.log('user factory');
 	angular
 		.module('youDoYou')
 		.factory('userFactory', factory)

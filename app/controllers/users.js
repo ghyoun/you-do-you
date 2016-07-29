@@ -6,7 +6,7 @@ function UsersController() {
     this.create = function(req,res){
           var newUser = new User(req.body);
           newUser.finance = {
-              monthly_income: 10,
+              monthly_income: 0,
               recuring: [],
               one_time: []
           };

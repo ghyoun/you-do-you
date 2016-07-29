@@ -2,7 +2,7 @@
 	'use strict'
     angular
         .module('youDoYou')
-        .controller('TasksController', function($scope) {
+        .controller('TasksController', function($scope, taskFactory) {
 
             $scope.select_sidebar_icon = function(){
                 $("#tasks-btn").toggleClass("sidebar-selected");
@@ -11,6 +11,20 @@
             $scope.select_sidebar_icon();
 
             $scope.tasks = [];
+
+			$scope.load = function() {
+				taskFactory.getTasks(function(taskData) {
+					$scope.tasks = taskData.data.tasks;
+				});
+			}
+
+			$scope.load();
+
+			$scope.save = function() {
+				taskFactory.saveTasks($scope.tasks, function(factoryData) {
+					console.log(factoryData);
+				})
+			}
 
             $scope.new_task = function() {
                 var new_date = new Date();

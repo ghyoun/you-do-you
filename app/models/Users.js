@@ -22,6 +22,10 @@ var userSchema = mongoose.Schema({
         minlength: 8
     },
     finance: {},
+    tasks: {
+        type: Array,
+        default: [],
+    }
 
 }, {timestamps: true});
 

@@ -1,7 +1,7 @@
 // Import Controllers
 var user = require('./controllers/users.js');
 var finance = require('./controllers/finances.js');
-
+var task = require('./controllers/tasks.js');
 module.exports = function(app) {
     // server routes ===========================================================
 	// handle things like api calls
@@ -20,7 +20,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/getFinances', finance.getFinances);
-
+	app.get('/getTasks', task.getTasks);
 	app.get('/logout', user.logout);
 
 	app.get('*', function(req, res) {
@@ -31,4 +31,5 @@ module.exports = function(app) {
 	app.post('/login', user.login);
 
 	app.post('/saveFinances', finance.saveFinances);
+	app.post('/saveTasks', task.saveTasks);
 };
