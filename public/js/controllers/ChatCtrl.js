@@ -9,6 +9,8 @@
         $scope.reveal = false;
 		$scope.chatReveal = false;
 		$scope.chatUser = '';
+		$scope.messageLog = [];
+		$scope.message = '';
 
 		$http.get("/session").then(function(res){
 			$scope.userInfo = res.data;
@@ -35,6 +37,12 @@
 
 		$scope.hideChat = function() {
 			$scope.chatReveal = false;
+		}
+
+		$scope.sendMessage = function(message) {
+			console.log(message);
+
+			$scope.messageLog.push(message);
 		}
     }
 })()

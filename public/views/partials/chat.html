@@ -19,13 +19,15 @@
                     <h4><strong>{{chatUser}}</strong></h4>
                 </div>
                 <div class='panel-body chat_log'>
-                    <div class='listing'>
-
+                    <div class='listing' ng-repeat="message in messageLog">
+                        <div class='col-md-offset-2 col-md-10 your_message'>
+                            {{message}}
+                        </div>
                     </div>
                 </div>
                 <div class='panel-body enter_message input-group'>
-                    <textarea class='text_area'></textarea>
-                    <button class='btn btn-primary send' type='button'>Send</button>
+                    <textarea class='text_area' ng-model='message'></textarea>
+                    <button class='btn btn-primary send' type='button' ng-click='sendMessage(message)'>Send</button>
                 </div>
             </div>
         </div>
