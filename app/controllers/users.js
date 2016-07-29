@@ -6,19 +6,17 @@ function UsersController() {
     this.create = function(req,res){
           var newUser = new User(req.body);
           newUser.finance = {
-              monthly_income: 0,
+              monthly_income: 10,
               recuring: [],
               one_time: []
           };
           newUser.markModified('finance');
-          console.log(newUser);
           if (req.body.password != req.body.confirmPassword) {
               res.json({status: false, errors: "Passwords do not match"})
           } else if (req.body.firstName.length < 2 || req.body.lastName.length < 2 ) {
               res.json({status: false, errors: "Name must be at least two characters"});
           } else {
               User.findOne({name:req.body.email}, function(err, dbUser) {
-    			console.log(newUser);
     			// console.log(req.body.first)
     			if(err) {
                     res.json({status:false, errors: err})

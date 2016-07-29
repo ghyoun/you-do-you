@@ -1,3 +1,4 @@
+
 <div class="sidebar">
     <ng-include src="'views/partials/sidebar.html'"></ng-include>
 </div>
@@ -23,18 +24,21 @@
                     </div>
 
                     <div class="panel-footer">
-                        <button class="btn btn-success" ng-click="saveMonthly()">Save</button>
+                        <button class="btn btn-success" ng-click="save()">Save</button>
                         <!--<button class="btn btn-success" ng-click="save_to_json()">Reset Month</button>-->
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-primary">
-                    <div class="panel-body">
+                    <div class="panel-body" id='burndown'>
 
                     </div>
                 </div>
             </div>
+            <script type='text/javascript'>
+
+            </script>
         </div>
 
         <div class="row">

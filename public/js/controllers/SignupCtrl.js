@@ -13,19 +13,7 @@
                 console.log(factoryData);
                 if (factoryData.data.status) {
                     self.user = factoryData.data.userInfo;
-                } else {
-                    console.log(factoryData.data.errors);
-                    self.errors = factoryData.data.errors;
-                }
-            });
-        };
-
-        self.login = function() {
-            userFactory.login(self.loginInfo, function(factoryData) {
-                console.log(factoryData);
-                if (factoryData.data.status) {
-                    self.user = factoryData.data.userInfo;
-                    $location.url('/dash')
+					$location.url('/dash')
                 } else {
                     console.log(factoryData.data.errors);
                     self.errors = factoryData.data.errors;

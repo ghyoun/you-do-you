@@ -5,16 +5,37 @@
         .controller('FinancesController', function($scope, financeFactory) {
 
         $scope.monthly_income = 0;
-        $scope.monthly_costs = 0;
         $scope.recurings = [];
         $scope.one_times = [];
 
         // Load from DB
+
         ///////////////
-		$scope.saveMonthly = function() {
+		$scope.load = function() {
 			financeFactory.getFinances(function(financeData) {
-				console.log(financeData);
+				$scope.monthly_income = financeData.data.finances.monthly_income;
+		        $scope.recurings = financeData.data.finances.recuring;
+		        $scope.one_times = financeData.data.finances.one_time;
 			})
+		}
+
+		$scope.load();
+		console.log($scope.monthly_income);
+		//Save to DB
+
+		$scope.save = function() {
+			financeFactory.saveFinances($scope.getUserFinance(), function(factoryData) {
+				console.log(factoryData);
+			})
+		}
+
+		$scope.getUserFinance = function() {
+			var userFinance = {
+				monthly_income: $scope.monthly_income,
+				recuring: $scope.recurings,
+				one_time: $scope.one_times
+			}
+			return userFinance;
 		}
         // Recuring functions
         $scope.new_recuring = function() {

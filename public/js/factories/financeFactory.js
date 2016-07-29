@@ -20,9 +20,17 @@
 			$http.get('/getFinances')
 				.then(function(returnData){
 					callback(returnData)
+					console.log(returnData);
 				})
 		}
 
+		factory.saveFinances = function(userFinance, callback) {
+			$http.post('/saveFinances', userFinance)
+				.then(function(returnData) {
+					callback(returnData);
+					console.log(returnData);
+				});
+		}
 		return factory;
 	}
 })()
