@@ -2,6 +2,7 @@
 var user = require('./controllers/users.js');
 var finance = require('./controllers/finances.js');
 var task = require('./controllers/tasks.js');
+var goal = require('./controllers/goals.js');
 module.exports = function(app) {
     // server routes ===========================================================
 	// handle things like api calls
@@ -24,6 +25,7 @@ module.exports = function(app) {
 	app.get('/getGoals', goal.getGoals);
 	app.get('/logout', user.logout);
 	app.get('/getUsers', user.getUsers);
+	app.get('/getUserInfo', user.getUserInfo);
 
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');

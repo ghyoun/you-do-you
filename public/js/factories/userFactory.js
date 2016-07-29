@@ -21,6 +21,13 @@
 				})
 		}
 
+		factory.getUserInfo = function(callback) {
+			$http.get('/getUserInfo')
+				.then(function(returnData) {
+					callback(returnData);
+				})
+		}
+
 		factory.login = function(userInfo, callback){
 			$http.post('/login', userInfo)
 				.then(function(returnData){

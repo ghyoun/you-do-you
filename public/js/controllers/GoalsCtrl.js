@@ -4,7 +4,7 @@
         .module('youDoYou')
         .controller('GoalsController', goalsCtrl)
 
-    function goalsCtrl(userFactory, $location, $scope) {
+    function goalsCtrl(goalFactory, $location, $scope) {
         $scope.select_sidebar_icon = function(){
                 $("#goals-btn").toggleClass("sidebar-selected");
         }
@@ -12,6 +12,20 @@
         $scope.select_sidebar_icon();
 
         $scope.goals = [];
+
+		$scope.load = function() {
+			goalFactory.getGoals(function(goalData) {
+				$scope.goals = goalData.data.goals;
+			});
+		}
+
+		$scope.load();
+
+		$scope.save = function() {
+			goalFactory.saveGoals($scope.goals, function(factoryData) {
+
+			})
+		}
 
         $scope.new_goal = function() {
             var new_date = new Date();
@@ -47,7 +61,7 @@
                 goal.event_log.push(text_date + " : Tried to add " + String(val) + ", but zeroed out.");
             } else {
                 goal.current_value = sum;
-                goal.event_log.push(text_date + " : Added " + String(val) + ", for a new total of " + sum + ".");                
+                goal.event_log.push(text_date + " : Added " + String(val) + ", for a new total of " + sum + ".");
             }
         }
 

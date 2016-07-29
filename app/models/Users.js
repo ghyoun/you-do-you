@@ -25,7 +25,12 @@ var userSchema = mongoose.Schema({
     tasks: {
         type: Array,
         default: [],
-    }
+    },
+    goals: {
+        type: Array,
+        default: [],
+    },
+
 
 }, {timestamps: true});
 

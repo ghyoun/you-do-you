@@ -31,7 +31,6 @@ function UsersController() {
     							id: newUser.id,
     							email: newUser.email
     						}
-                            console.log(req.session['userInfo']);
     						res.json({status:true, userInfo: newUser})
     					}
     				})
@@ -74,6 +73,22 @@ function UsersController() {
         })
     };
 
+    this.getUserInfo = function(req, res) {
+        if (req.session['userInfo'] == null) {
+            res.json({status: false, userInfo: null});
+        } else {
+            User.findOne({email: req.session['userInfo'].email}, function(err, dbUser) {
+                if (err) {
+                    res.json({status:false, info:null});
+                } else if (!dbUser) {
+                    res.json({status:false, info:null});
+                } else {
+                    res.json({status:false, info: dbUser});
+                }
+            })
+        }
+    };
+
     this.session = function(req,res){
 		if(req.session['userInfo']) {
             res.json({status:true, userInfo: req.session['userInfo']})
@@ -81,6 +96,6 @@ function UsersController() {
 			res.json({status:false, userinfo:null})
 		}
 	}
-}
+};
 
 module.exports = new UsersController();

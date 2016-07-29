@@ -19,7 +19,6 @@
 			$http.get('/getGoals')
 				.then(function(returnData){
 					callback(returnData)
-					console.log(returnData);
 				})
 		}
 
@@ -27,7 +26,6 @@
 			$http.post('/saveGoals', userTask)
 				.then(function(returnData) {
 					callback(returnData);
-					console.log(returnData);
 				});
 		}
 		return factory;
