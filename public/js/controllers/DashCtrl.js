@@ -14,6 +14,8 @@
 					console.log(factoryData);
 					$scope.tasks = factoryData.data.info.tasks;
 					$scope.goals = factoryData.data.info.goals;
+					$scope.one_times = factoryData.data.info.finance.one_time;
+					$scope.monthly_income = factoryData.data.info.finance.monthly_income;
 					console.log($scope.tasks);
 					console.log(factoryData);
 				})
