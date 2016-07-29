@@ -13,11 +13,17 @@
 					console.log(factoryData);
 					$scope.tasks = factoryData.data.info.tasks;
 					$scope.goals = factoryData.data.info.goals;
+					console.log($scope.tasks);
+					console.log(factoryData);
 				})
 			}
+<<<<<<< HEAD
 
 			console.log($scope.tasks);
 			
+=======
+			console.log($scope.tasks);
+>>>>>>> origin/master
 			$scope.load();
         });
 })()
