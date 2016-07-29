@@ -1,6 +1,5 @@
 (function(){
 	'use strict'
-    console.log('finance factory');
 	angular
 		.module('youDoYou')
 		.factory('financeFactory', factory);
