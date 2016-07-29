@@ -122,6 +122,18 @@ select.high, select option.high {
     border-color: #d43f3a;
 }
 
+h4.low {
+    color: #5cb85c;
+}
+
+h4.medium {
+    color: #f0ad4e;
+}
+
+h4.high {
+    color: #d9534f;
+}
+
     .all_users {
         background-color: lightgrey;
         height:30px;
