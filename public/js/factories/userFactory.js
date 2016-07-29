@@ -28,7 +28,7 @@
 				})
 		}
 		factory.logout = function(callback){
-			$http.post('/logout')
+			$http.get('/logout')
 				.then(function(returnData){
 					callback(returnData)
 				})

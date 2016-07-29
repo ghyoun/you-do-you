@@ -21,13 +21,14 @@ module.exports = function(app) {
 
 	app.get('/getFinances', finance.getFinances);
 
+	app.get('/logout', user.logout);
+
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
 
 	app.post('/signup', user.create);
 	app.post('/login', user.login);
-	app.post('/logout', user.logout);
 
 	app.post('/saveFinances', finance.saveFinances);
 };

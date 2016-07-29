@@ -61,13 +61,7 @@ function UsersController() {
     };
 
     this.logout = function(req, res) {
-        req.session.destroy(function(err){
-			if(err) {
-                res.json({status:false, errors: err})
-            } else {
-				res.json({status:true})
-            }
-		})
+        req.session.destroy();
     };
 
     this.session = function(req,res){
