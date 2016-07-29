@@ -10,8 +10,6 @@
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
                         <h1><strong>Goals</strong></h1>
-                    </div>
-                    <div class="panel-heading">
                         <div class="col-md-2 col-md-offset-1">
                             <h3><strong>S</strong>pecific</h3>
                         </div>
@@ -29,59 +27,97 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <div class="col-md-12">
+                        <div class="col-md-6" ng-repeat="goal in goals">
                             <div class="panel panel-default">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="col-md-4">Description</th>
-                                            <th>Category</th>
-                                            <th class="col-md-2">Priority</th>
-                                            <th>Due Date</th>
-                                            <th class="col-md-2">Status</th>
-                                            <th>Remove</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-striped">
-                                        <tr ng-repeat="task in tasks">
-                                            <td>
-                                                <input type="text" class="form-control" placeholder="Description" ng-model="task.description">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" placeholder="Category" ng-model="task.category">
-                                            </td>
-                                            <td>
-                                                <select class="form-control"  ng-class="{low:'low', medium:'medium', 'high':'high'}[task.priority]" ng-model="task.priority">
-                                                    <option class="low" value="low">Low</option>
-                                                    <option class="medium" value="medium">Medium</option>
-                                                    <option class="high" value="high">High</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" ng-model="task.due_date">
-                                            </td>
-                                            <td>
-                                                <select class="form-control" ng-model="task.status">
-                                                    <option value="new">Not Started</option>
-                                                    <option value="in_progress">In Progress</option>
-                                                    <option value="completed">Completed</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" ng-click="delete_task($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="panel-heading text-center goal-heading">
+                                     <h3><strong>{{goal.title}}</strong></h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            0<span class="pull-right">{{goal.max_value}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped active" ng-class="complete(goal) ? 'progress-bar-success' : ''" role="progressbar"
+                                                aria-valuenow="{{goal.current_value}}" aria-valuemin="0" aria-valuemax="{{goal.max_value}}" style="width:{{get_percent(goal)}}%">
+                                                    <p class="progtext">
+                                                        {{goal.current_value}} {{goal.units}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row" style="font-family:monospace;">
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-success" ng-click="add_to_current(goal,1)">+1</button>
+                                                    <button class="btn btn-success" ng-click="add_to_current(goal,5)">+5</button>
+                                                    <button class="btn btn-success" ng-click="add_to_current(goal,10)">+10</button>
+                                                    <button class="btn btn-success" ng-click="add_to_current(goal,50)">+50</button>
+                                                </div>
+                                            </div>
+                                            <div style="height:10px;"></div>
+                                            <div class="row" style="font-family:monospace;">
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-danger" ng-click="add_to_current(goal,-1)">-1</button>
+                                                    <button class="btn btn-danger" ng-click="add_to_current(goal,-5)">-5</button>
+                                                    <button class="btn btn-danger" ng-click="add_to_current(goal,-10)">-10</button>
+                                                    <button class="btn btn-danger" ng-click="add_to_current(goal,-50)">-50</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel event-log">
+                                                <div class="panel-body">
+                                                    <p ng-repeat="line in goal.event_log">
+                                                        <strong>{{line}}</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="panel-footer">
-                                    <button class="btn btn-primary" ng-click="new_task()">Add Task</button>
-                                    <button class="btn btn-success" ng-click="save()">Save</button>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-addon"><strong>Title</strong></span>
+                                                <input type="text" class="form-control input-sm" ng-model="goal.title">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-addon"><strong>Units</strong></span>
+                                                <input type="text" class="form-control input-sm" ng-model="goal.units">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="height:10px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-addon"><strong>Current Progress</strong></span>
+                                                <input type="number" class="form-control input-sm" ng-model="goal.current_value">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-addon"><strong>Target Value</strong></span>
+                                                <input type="number" class="form-control input-sm" ng-model="goal.max_value">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="panel-footer">
-
+                        <button class="btn btn-primary" ng-click="new_goal()">Add Goal</button>
+                        <button class="btn btn-success" ng-click="save()">Save</button>
                     </div>
                 </div>
             </div>

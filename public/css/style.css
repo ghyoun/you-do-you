@@ -122,8 +122,6 @@ select.high, select option.high {
     border-color: #d43f3a;
 }
 
-
-
     .all_users {
         background-color: lightgrey;
         height:30px;
@@ -245,3 +243,21 @@ select.high, select option.high {
         vertical-align: top;
         border-radius: 0px;
     }
+
+.progress {
+    height: 40px !important;
+}
+
+.progtext {
+    padding-top: 10px;
+}
+
+.goal-heading {
+    height: 78px;
+}
+
+.event-log {
+    font-size: 10px;
+    height: 75px;
+    overflow-y: scroll;
+}
