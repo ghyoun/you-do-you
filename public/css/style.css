@@ -121,3 +121,21 @@ select.high, select option.high {
     background-color: #d9534f;
     border-color: #d43f3a;
 }
+
+.progress {
+    height: 40px !important;
+}
+
+.progtext {
+    padding-top: 10px;
+}
+
+.goal-heading {
+    height: 78px;
+}
+
+.event-log {
+    font-size: 10px;
+    height: 75px;
+    overflow-y: scroll;
+}
