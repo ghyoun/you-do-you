@@ -64,6 +64,16 @@ function UsersController() {
         req.session.destroy();
     };
 
+    this.getUsers = function(req, res) {
+        User.find({}, function(err, dbUsers) {
+            if (err) {
+                res.json({status: false, errors: err});
+            } else {
+                res.json({status:true, all_users: dbUsers});
+            }
+        })
+    };
+
     this.session = function(req,res){
 		if(req.session['userInfo']) {
             res.json({status:true, userInfo: req.session['userInfo']})

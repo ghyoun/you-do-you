@@ -1,0 +1,33 @@
+<div class='container' ng-controller='ChatController'>
+    <nav class='footer' ng-if="userInfo.status">
+        <div class='footer_contents'>
+            <div class='all_users' ng-click='revealUsers()' ng-show='!reveal'>
+                <h4><strong>Users</strong></h4>
+            </div>
+            <div class='the_users panel' ng-if='reveal'>
+                <div class='panel-heading user_list_heading' ng-click='revealUsers()'>
+                    <h4><strong>Users</strong></h4>
+                </div>
+                <div class='panel-body user_list list-group'>
+                    <div class='listing' ng-repeat="user in allUsers">
+                        <a href='' class='list-group-item list-group-item-action' ng-click='openChat(user)'><h4>{{user.firstName}} {{user.lastName}}</h4></a>
+                    </div>
+                </div>
+            </div>
+            <div class='im panel' ng-show='chatReveal'>
+                <div class='panel-heading friend_name' ng-click='hideChat()'>
+                    <h4><strong>{{chatUser}}</strong></h4>
+                </div>
+                <div class='panel-body chat_log'>
+                    <div class='listing'>
+
+                    </div>
+                </div>
+                <div class='panel-body enter_message input-group'>
+                    <textarea class='text_area'></textarea>
+                    <button class='btn btn-primary send' type='button'>Send</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

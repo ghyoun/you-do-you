@@ -41,11 +41,13 @@
         <script src="js/controllers/404Ctrl.js"></script>
         <script src="js/controllers/SidebarCtrl.js"></script>
         <script src="js/controllers/NavbarCtrl.js"></script>
+        <script src="js/controllers/ChatCtrl.js"></script>
     </head>
     <body ng-app="youDoYou">
         <!-- Header -->
 
         <!-- ANGULAR DYNAMIC CONTENT -->
         <div ng-view></div>
+        <ng-include src="'views/partials/chat.html'"></ng-include>
     </body>
 </html>

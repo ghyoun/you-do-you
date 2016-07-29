@@ -121,3 +121,127 @@ select.high, select option.high {
     background-color: #d9534f;
     border-color: #d43f3a;
 }
+
+
+
+    .all_users {
+        background-color: lightgrey;
+        height:30px;
+        width: 150px;
+        padding-left: 10px;
+        margin-right: 50px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        position: fixed;
+        bottom: 0pt;
+        right: 0pt;
+    }
+
+    .all_users:hover {
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    .all_users h4 {
+        margin: 0px;
+        padding: 7px 0px 7px 0px;
+    }
+
+
+    .the_users {
+        background-color: lightgrey;
+        height: auto;
+        width: 250px;
+        margin-right: 25px;
+        margin-bottom: 0px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        position: fixed;
+        bottom: 0pt;
+        right: 0pt;
+    }
+
+    .user_list_heading:hover {
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    .user_list_heading {
+        margin: 0px;
+        padding: 1px 0px 1px 10px;
+        border-bottom: 1px solid grey;
+
+    }
+
+    .user_list {
+        height: 300px;
+        width: inherit;
+        overflow-y: scroll;
+        padding: 0px;
+    }
+
+    .im {
+        background-color: lightgrey;
+        height: auto;
+        width: 200px;
+        margin-right: 25px;
+        margin-bottom: 0px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        position: fixed;
+        bottom: 0pt;
+        right: 200pt;
+    }
+
+    .friend_name {
+        padding: 1px 0px 1px 10px;
+    }
+
+    .friend_name:hover {
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    .friend_name h4 {
+        margin: 2px 0px 2px 0px;
+    }
+
+    .chat_log {
+        height: 200px;
+        padding: 0px;
+        background-color: white;
+    }
+
+    .enter_message {
+        padding: 0px;
+        height: 55px;
+        width: 200px !important;
+    }
+
+    .enter_message textarea {
+        height: 60px;
+        width:143px;
+        display: inline-block;
+        vertical-align: top;
+        overflow-y: scroll;
+    }
+
+    .enter_message button {
+        height: 60px;
+        width: 55px;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 0px;
+    }

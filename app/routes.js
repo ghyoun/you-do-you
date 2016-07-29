@@ -22,6 +22,7 @@ module.exports = function(app) {
 	app.get('/getFinances', finance.getFinances);
 	app.get('/getTasks', task.getTasks);
 	app.get('/logout', user.logout);
+	app.get('/getUsers', user.getUsers);
 
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
