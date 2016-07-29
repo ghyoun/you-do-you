@@ -10,11 +10,14 @@
 
 			$scope.load = function() {
 				userFactory.getUserInfo(function(factoryData) {
+					console.log(factoryData);
 					$scope.tasks = factoryData.data.info.tasks;
 					$scope.goals = factoryData.data.info.goals;
 				})
 			}
 
+			console.log($scope.tasks);
+			
 			$scope.load();
         });
 })()
