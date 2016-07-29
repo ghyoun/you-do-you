@@ -43,6 +43,12 @@
 				controller: 'FinancesController'
 			})
 
+			// goals page
+			.when('/goals', {
+				templateUrl: 'views/goals.html',
+				controller: 'GoalsController'
+			})
+
             // 404 page
     		.when('/404', {
     			templateUrl: 'views/404.html',

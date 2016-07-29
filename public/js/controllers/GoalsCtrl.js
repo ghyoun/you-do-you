@@ -1,9 +1,8 @@
 (function(){
 	'use strict'
-    console.log('user controller');
     angular
         .module('youDoYou')
-        .controller('SignupController', signupCtrl)
+        .controller('GoalsController', goalsCtrl)
 
     function goalsCtrl(userFactory, $location) {
         var self = this;
