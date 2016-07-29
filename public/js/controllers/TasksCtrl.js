@@ -18,9 +18,9 @@
                 var task = {
                     description : "",
                     category : "",
-                    priority : "",
+                    priority : "low",
                     due_date : text_date,
-                    status : "Not Started"
+                    status : "new"
                 };
                 $scope.tasks.push(task);
             };
